@@ -19,9 +19,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/scss/golden-darkness.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/js/d3.v3.min.js",
+        "assets/js/planetaryjs.min.js",
+        "assets/js/topojson.v1.min.js",
+        "assets/js/planet.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -54,7 +60,8 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }

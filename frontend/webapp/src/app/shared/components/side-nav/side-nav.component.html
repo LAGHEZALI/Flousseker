@@ -1,0 +1,54 @@
+<ng-container>
+
+  <mat-sidenav-container class="container" (keydown.escape)="sidenav.close()" (backdropClick)="sidenav.close()">
+
+    <mat-sidenav #sidenav mode="push" opened="false" class="sidenav"
+                 (keydown.escape)="sidenav.close()"
+                 [fixedInViewport]="false" [fixedTopGap]="0" [fixedBottomGap]="0" >
+
+      <mat-list dense>
+
+        <mat-list-item>
+          <mat-icon color="primary" mat-list-icon>home</mat-icon>
+          <button class="menu-option" routerLink="/home" mat-button color="primary">Home</button>
+        </mat-list-item>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-list-item>
+          <mat-icon color="primary" class="fab fa-btc" aria-hidden="true" mat-list-icon></mat-icon>
+          <button class="menu-option" routerLink="/products" mat-button color="primary">Our Products</button>
+        </mat-list-item>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-list-item>
+          <mat-icon color="primary" class="fas fa-building" mat-list-icon></mat-icon>
+          <button class="menu-option" routerLink="/home" mat-button color="primary">Our Company</button>
+        </mat-list-item>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-list-item>
+          <mat-icon color="primary" mat-list-icon class="fas fa-eye"></mat-icon>
+          <button class="menu-option" routerLink="/home" mat-button color="primary">Our Vision</button>
+        </mat-list-item>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-list-item>
+          <mat-icon color="primary" mat-list-icon class="fas fa-users"></mat-icon>
+          <button class="menu-option" routerLink="/contact" mat-button color="primary">Contact</button>
+        </mat-list-item>
+
+      </mat-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content color="accent" >
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</ng-container>
