@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatSidenav} from "@angular/material/sidenav";
 import { EventHandlerService } from "../../services/event-handler.service";
+import {MatStepper} from "@angular/material";
 
 @Component({
   selector: 'app-side-nav',
@@ -9,6 +10,16 @@ import { EventHandlerService } from "../../services/event-handler.service";
 })
 export class SideNavComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
+
+  logoSize = ' fa-2x';
+
+  links = [
+    {title: 'Home'          , logoName: 'fas fa-home'+this.logoSize       , value: '/home'},
+    {title: 'Our Products'  , logoName: 'fab fa-btc'+this.logoSize        , value: '/products'},
+    {title: 'Our Company'   , logoName: 'fas fa-building'+this.logoSize   , value: '/company'},
+    {title: 'Our Vision'    , logoName: 'fas fa-eye'+this.logoSize        , value: '/vision'},
+    {title: 'Contact'       , logoName: 'fas fa-users'+this.logoSize      , value: '/contact'}
+  ]
 
   constructor(private click: EventHandlerService) {}
 
@@ -19,7 +30,6 @@ export class SideNavComponent implements OnInit {
   }
 
   onToggle() {
-    console.log("3")
     this.sidenav.toggle()
   }
 }

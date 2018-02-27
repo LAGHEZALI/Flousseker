@@ -7,12 +7,32 @@ const server = http.createServer(app);
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.get('/planetaryMap.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/assets/json/planetaryjs/planetaryMap.json'));
+});
+
 app.get('/data.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/assets/json/webgl/data.json'));
 });
 
-app.get('/world.jpg', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/assets/images/webgl/world.jpg'));
+app.get('/world1.jpg', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/assets/images/webgl/world1.jpg'));
+});
+
+app.get('/world12.jpg', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/assets/images/webgl/world2.jpg'));
+});
+
+app.get('/world3.jpg', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/assets/images/webgl/world2.jpg'));
+});
+
+app.get('/world4.jpg', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/assets/images/webgl/world4.jpg'));
+});
+
+app.get('/world5.jpg', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/assets/images/webgl/world5.jpg'));
 });
 
 app.get('*', (req, res) => {

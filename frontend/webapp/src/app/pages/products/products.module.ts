@@ -8,6 +8,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 
 import { ProductsComponent } from "./products.component";
 import { GeoCurrencyStatisticsComponent } from "./geo-currency-statistics/geo-currency-statistics.component";
+import { GeoCurrencyPingsComponent } from './geo-currency-pings/geo-currency-pings.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { GeoCurrencyStatisticsComponent } from "./geo-currency-statistics/geo-cu
   ],
   declarations: [
     ProductsComponent,
-    GeoCurrencyStatisticsComponent
+    GeoCurrencyStatisticsComponent,
+    GeoCurrencyPingsComponent
   ]
 })
 export class ProductsModule { }

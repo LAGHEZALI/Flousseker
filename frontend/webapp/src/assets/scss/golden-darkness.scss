@@ -10,7 +10,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://www.google.com/design/spec/style/color.html
 $golden-darkness-primary: mat-palette($mat-yellow, 600);
-$golden-darkness-accent:  mat-palette($mat-orange, 900);
+$golden-darkness-accent:  mat-palette($mat-grey, 900);
 
 // The warn palette is optional (defaults to red).
 $golden-darkness-warn:    mat-palette($mat-red, A200);

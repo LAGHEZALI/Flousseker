@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "webapp"
+    "name": "Flousseker"
   },
   "apps": [
     {
@@ -22,12 +22,7 @@
         "styles.css",
         "assets/scss/golden-darkness.scss"
       ],
-      "scripts": [
-        "assets/js/d3.v3.min.js",
-        "assets/js/planetaryjs.min.js",
-        "assets/js/topojson.v1.min.js",
-        "assets/js/planet.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
