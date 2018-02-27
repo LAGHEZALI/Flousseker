@@ -3,11 +3,14 @@ var planetaryObject = (function() {
   return {
     init: function() {
 
+
+
+
       var globe = planetaryjs.planet();
       globe.loadPlugin(autorotate(10));
       globe.loadPlugin(planetaryjs.plugins.earth({
-        topojson: { file:   'planetaryMap.json' },
-        oceans:   { fill:   '#000000' },
+        topojson: { file:   'assets/json/planetaryjs/planetaryMap.json' },
+        oceans:   { fill:   '#333333' },
         land:     { fill:   '#ce9f00' },
         borders:  { stroke: '#ffffff' }
       }));
@@ -30,13 +33,30 @@ var planetaryObject = (function() {
       globe.projection.scale(175).translate([175, 175]).rotate([0, -10, 0]);
 
       // Every few hundred milliseconds, we'll draw another random ping.
-      var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
+      var colors = ['red'];
       setInterval(function() {
-        var lat = Math.random() * 170 - 85;
-        var lng = Math.random() * 360 - 180;
-        var color = colors[Math.floor(Math.random() * colors.length)];
-        globe.plugins.pings.add(lng, lat, { color: color, ttl: 2000, angle: Math.random() * 10 });
-      }, 150);
+
+        // read json file
+        xhr = new XMLHttpRequest();
+        xhr.open('GET', 'assets/json/planetaryjs/data.json', true);
+        xhr.onreadystatechange = function(e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              var data = JSON.parse(xhr.responseText);
+              window.data = data;
+              var lat, lng, color, i;
+              for (i = 0; i < data.length; i += 2) {
+                lat = data[i];
+                lng = data[i + 1];
+                color = colors[Math.floor(Math.random() * colors.length)];
+                globe.plugins.pings.add(lng, lat, { color: color, ttl: 2000, angle: Math.random() * 10 });
+              }
+            }
+          }
+        };
+        xhr.send(null);
+
+      }, 1000);
 
       var canvas = document.getElementById('pingGlobeCanvas');
       if (window.devicePixelRatio == 2) {

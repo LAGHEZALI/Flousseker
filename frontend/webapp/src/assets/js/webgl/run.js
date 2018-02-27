@@ -19,7 +19,7 @@ var webGlObject = (function() {
         TWEEN.start();
 
         xhr = new XMLHttpRequest();
-        xhr.open('GET', 'data.json', true);
+        xhr.open('GET', 'assets/json/webgl/data.json', true);
         xhr.onreadystatechange = function(e) {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
