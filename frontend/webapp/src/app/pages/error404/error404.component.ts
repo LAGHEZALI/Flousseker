@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+
+import '../../../assets/js/404/matrix.js';
+
+declare var errorObject: any;
 
 @Component({
   selector: 'app-error404',
@@ -12,4 +16,7 @@ export class Error404Component implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit(){
+    errorObject.init();
+  }
 }

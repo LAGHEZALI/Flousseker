@@ -20,12 +20,12 @@
 
             <mat-toolbar color="primary">
 
-              <span class="w3-xxlarge">{{product.title}}</span>
+              <span class="title">{{product.title}}</span>
 
               <span class="fill-remaining-space"></span>
 
-              <button *ngIf="i!=0" mat-button color="accent" matStepperPrevious><i class="fas fa-arrow-circle-left fa-3x"></i></button>
-              <button *ngIf="i!=myProducts.length-1" mat-button color="accent" matStepperNext><i class="fas fa-arrow-circle-right fa-3x"></i></button>
+              <button *ngIf="i!=0" mat-button color="accent" matStepperPrevious><i class="fas fa-arrow-circle-left fa-3x navigation-icon"></i></button>
+              <button *ngIf="i!=myProducts.length-1" mat-button color="accent" matStepperNext><i class="fas fa-arrow-circle-right fa-3x navigation-icon"></i></button>
 
             </mat-toolbar>
 
@@ -35,13 +35,13 @@
             <img class="w3-image w3-round w3-border w3-padding" mat-card-image src="{{product.imgFileName}}" alt="Photo of a Shiba Inu">
           </mat-grid-tile>
 
-          <mat-grid-tile class="w3-xlarge w3-margin w3-padding-large" [colspan]="1" [rowspan]="2">
+          <mat-grid-tile class="w3-margin w3-padding-large product-description" [colspan]="1" [rowspan]="2">
             {{product.description}}
           </mat-grid-tile>
 
           <mat-grid-tile [colspan]="1" [rowspan]="1">
             <button routerLink="{{product.link}}" mat-raised-button color="primary"
-                    class="w3-xlarge">Try It Now !</button>
+                    class="try-it">Try It Now !</button>
           </mat-grid-tile>
 
         </mat-grid-list>

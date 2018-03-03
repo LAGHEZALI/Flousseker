@@ -16,7 +16,7 @@ export class SideNavComponent implements OnInit {
   links = [
     {title: 'Home'          , logoName: 'fas fa-home'+this.logoSize       , value: '/home'},
     {title: 'Our Products'  , logoName: 'fab fa-btc'+this.logoSize        , value: '/products'},
-    {title: 'Our Company'   , logoName: 'fas fa-building'+this.logoSize   , value: '/company'},
+    {title: 'About Us'   , logoName: 'fas fa-building'+this.logoSize   , value: '/aboutus'},
     {title: 'Our Vision'    , logoName: 'fas fa-eye'+this.logoSize        , value: '/vision'},
     {title: 'Contact'       , logoName: 'fas fa-users'+this.logoSize      , value: '/contact'}
   ]

@@ -1,7 +1,7 @@
 
 <mat-sidenav-container class="container" (keydown.escape)="sidenav.close()" (backdropClick)="sidenav.close()">
 
-  <mat-sidenav #sidenav mode="push" opened="false" class="sidenav"
+  <mat-sidenav #sidenav mode="over" opened="false" class="sidenav"
                (keydown.escape)="sidenav.close()"
                [fixedInViewport]="false" [fixedTopGap]="0" [fixedBottomGap]="0" >
 
@@ -10,8 +10,7 @@
 
         <li *ngFor="let link of links" class="w3-bar">
           <div class="w3-bar-item">
-            <i class="{{link.logoName}}" style="color: #FDD835"></i>
-            <button class="menu-option" routerLink="{{link.value}}" mat-button color="primary">{{link.title}}</button>
+            <button class="menu-option" routerLink="{{link.value}}" mat-button color="primary"><i class="{{link.logoName}} menu-option-icon"></i>{{link.title}}</button>
           </div>
         </li>
 

@@ -20,13 +20,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from "./pages/home/home.component";
 import { Error404Component } from './pages/error404/error404.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     Error404Component,
-    ContactComponent
+    ContactComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
