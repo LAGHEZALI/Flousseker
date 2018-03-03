@@ -13,7 +13,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -31,7 +33,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatExpansionModule,
     MatGridListModule,
     MatCardModule,
-    MatStepperModule
+    MatStepperModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -46,7 +51,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatExpansionModule,
     MatGridListModule,
     MatCardModule,
-    MatStepperModule
+    MatStepperModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   declarations: []
 })

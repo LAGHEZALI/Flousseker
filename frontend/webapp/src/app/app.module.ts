@@ -3,7 +3,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ProductsModule } from "./pages/products/products.module";
@@ -11,6 +11,8 @@ import { ProductsModule } from "./pages/products/products.module";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { SharedModule } from "./shared/modules/shared.module";
+
+import { AgmCoreModule } from '@agm/core';
 
 
 //  Imported Components
@@ -33,9 +35,13 @@ import { AboutusComponent } from './pages/aboutus/aboutus.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ProductsModule,
     SharedModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBNdT3qPrZbAK3aQiek7nTXkAW6SYfVyvc'
+    }),
     AppRoutingModule
   ],
   providers: [],

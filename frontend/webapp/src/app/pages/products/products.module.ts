@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from "../../shared/modules/shared.module";
 
@@ -13,12 +13,14 @@ import { ProductsComponent } from "./products.component";
 import { GeoCurrencyStatisticsComponent } from "./geo-currency-statistics/geo-currency-statistics.component";
 import { GeoCurrencyPingsComponent } from './geo-currency-pings/geo-currency-pings.component';
 import { RtBitcoinComponent } from './rt-bitcoin/rt-bitcoin.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     SharedModule,
     Ng2OdometerModule.forRoot(),
     ProductsRoutingModule
@@ -27,7 +29,8 @@ import { RtBitcoinComponent } from './rt-bitcoin/rt-bitcoin.component';
     ProductsComponent,
     GeoCurrencyStatisticsComponent,
     GeoCurrencyPingsComponent,
-    RtBitcoinComponent
+    RtBitcoinComponent,
+    CurrencyConverterComponent
   ]
 })
 export class ProductsModule { }

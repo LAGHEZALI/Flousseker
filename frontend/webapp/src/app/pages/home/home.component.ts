@@ -1,8 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-import "../../../assets/js/home/video-bg.js";
-
-declare var videoObject: any;
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +12,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngAfterViewInit(){
-    videoObject.init();
-  }
 }
